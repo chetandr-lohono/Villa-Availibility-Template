@@ -1,12 +1,20 @@
-# Rails on Replit
+# Question
 
-This is a template to get you started with Rails on Replit. It's ready to go so you can just hit run and start coding!
+At Lohono Stays, we provide villas on rent to the prospective clients. Each villa has a calendar associated with it, which denotes date, rate, availability on the given date. 
 
-This template was generated using `rails new` (after you install the `rails` gem from the packager sidebar) so you can always do that if you prefer to set it up from scratch. The only had two make config changes we had to make to run it on Replit:
+For a villa to be available, all the stay nights for which client is going to stay, should be available. For eg Client wants to stay in a villa between 1-1-2021 to 5-1-2021, but 3-1-2021 is unavailable, the villa is unavailable for this stay.
 
-- bind the app on `0.0.0.0` instead of `localhost` (see `.replit`)
-- allow all hosts (see `config/environments/development.rb`)
-- allow the app to be iframed (see `config/application.rb`)
+But if someone wants to stay between 1-1-2021 to 3-1-2021 the villa is available as he/she will be checking out in the morning of 3-1-2021
+
+A villa's total price can be calculated as the sum of the price of individual nights for which client is staying + 18% GST.
+
+## Creating the tables.
+- Create the required tables using db migration
+
+## Write following APIs
+
+- API to list villas which denotes average price per night and availability of the villa for entered dates. This API should also sort by price and availability depending upon query parameters
+- API to calculate the total rate along with availability of a villa for entered dates
 
 ## Running the app
 
